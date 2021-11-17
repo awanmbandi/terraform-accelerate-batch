@@ -34,7 +34,8 @@ resource "aws_instance" "my-ec2-vm" {
       "sudo yum update -y",
       "sudo yum install -y httpd",
       "sudo systemctl httpd start",
-      "sudo systemctl enable httpd"
+      "sudo systemctl enable httpd",
+      "sudo systemctl status httpd"
       ]
   }
 */
