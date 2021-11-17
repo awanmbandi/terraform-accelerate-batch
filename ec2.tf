@@ -33,9 +33,9 @@ resource "aws_instance" "my-ec2-vm" {
       "sleep 120",  # Will sleep for 120 seconds to ensure Apache webserver is provisioned using user_data
       "sudo yum update -y",
       "sudo yum install -y httpd",
-      "sudo systemctl httpd start",
-      "sudo systemctl enable httpd",
-      "sudo systemctl status httpd"
+      "sudo systemctl start httpd",
+      "sudo systemctl httpd enable",
+      "sudo systemctl httpd status"
       ]
   }
 */
