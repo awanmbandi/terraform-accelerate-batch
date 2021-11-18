@@ -27,18 +27,17 @@ resource "aws_instance" "my-ec2-vm" {
     destination = "/tmp/apache-install.sh"
   }
 
- /*
+
   provisioner "remote-exec" {
     inline = [
       "sleep 120",  # Will sleep for 120 seconds to ensure Apache webserver is provisioned using user_data
       "sudo yum update -y",
       "sudo yum install -y httpd",
-      "sudo systemctl httpd start",
-      "sudo systemctl httpd enable",
-      "sudo systemctl httpd status"
+      "sudo service start httpd",
+      "sudo service start httpd"
       ]
   }
-*/
+
 }
 
 
